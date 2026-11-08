@@ -8,12 +8,11 @@
  * @author Ruslan Feshchenko
  */
 
-import org.graalvm.polyglot.*;
-import org.graalvm.python.embedding.GraalPyResources;
+import org.graalvm.polyglot.Context;
 
 public class Python_runner {
     public static void main(String[] args) {
-        try (Context context = GraalPyResources.createContext()) {
+        try (Context context = Context.newBuilder().build()) {
             context.eval("python", "print('Hello from GraalPy inside NetBeans!')");
         }
     }
