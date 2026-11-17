@@ -12,11 +12,10 @@ import java.io.File;
 import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.io.IOAccess; // Import the updated IO access controls
 
-
 public class Python_runner {
     public static void main(String[] args) {
         // Define the exact path to your GraalPy venv executable
-        String venvPath = new File("C:\\Java\\Projects\\GraalPyTest\\src\\main\\resources\\venv\\Scripts\\graalpy.exe").getAbsolutePath();
+        String venvPath = new File("src\\main\\resources\\venv\\Scripts\\graalpy.exe").getAbsolutePath();
         
         // Configure the polyglot context to leverage the environment
         try (Context context = Context.newBuilder("python")
